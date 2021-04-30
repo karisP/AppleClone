@@ -1,3 +1,4 @@
+import * as React from 'react';
 import styles from './Navbar.module.css';
 console.log(styles);
 const Navbar = () => {
