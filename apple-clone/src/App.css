@@ -1,0 +1,37 @@
+.App {
+  text-align: center;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: black;
+  font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  font-size: 14px;
+}
+.one {
+  color: white;
+  background-color: #0071E3;
+}
+
+.two {
+  color: #1d1d1f;
+  background-color: #fbfbfd;
+}
+
+.two span {
+  color: #06c;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+}
