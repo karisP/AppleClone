@@ -3,19 +3,55 @@
     display: flex;
     flex-direction: column;
     height: 500px;
-    margin-bottom: 12px;;
+    margin-bottom: 12px;
+}
+
+.text {
+    padding-top: 37px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    margin-top: .7em;
+    font-size: 17px;
+    line-height: 1.23536;
+    font-weight: 400;
+    letter-spacing: -.022em;
+    color: #06c;
+}
+
+.links div::after {
+    content: ">";
+    padding-left: .3em;
+}
+
+.links div:last-child {
+    margin-left: 27px;
 }
 
 .container h2 {
     font-size: 32px;
+    line-height: 1.125;
+    font-weight: 600;
+    letter-spacing: .004em;
 }
 
 .container h3 {
     font-size: 19px;
+    line-height: 1.4211;
+    font-weight: 400;
+    letter-spacing: .012em;
+    margin-top: 2px;
 }
 
-.container p, .container a{
-    font-size: 17px;
+.container p {
+    font-size: 14px;
+    line-height: 1.42859;
+    font-weight: 400;
+    letter-spacing: -.016em;
+    margin-top: 6px;
+    color: #86868b;
 }
 
 .dark-theme {

@@ -11,19 +11,36 @@ const Square = (props: IProps) => {
         backgroundPosition: `center`,
         backgroundSize: `cover`,
     }
+    const backgroundStyleLogo = {
+        backgroundImage: `url(${props.content.logo})`,
+        backgroundRepeat: 'no-repeat',
+        height: '45px',
+        backgroundPosition: `center`,
+        backgroundSize: `contain`,
+    }
 
     return(
         <div className={props.content.colorScheme !== "DARK" ? styles.container : `${styles.container} ${styles['dark-theme']}`} style={backgroundStyle}>
             <div className={styles.text}>
-                <h2>{props.content.header}</h2>
+                {
+                    props.content.logo ?
+                    <div style={backgroundStyleLogo}></div>
+                    :
+                    <h2>{props.content.header}</h2>
+                }
                 <h3>{props.content.subheader}</h3>
-                <p>{props.content.availability}</p>
+                {
+                    props.content.availability ? props.content.availability.map((x, key) => (
+                        <p key={key}>{x}</p>
+                    ))
+                    :
+                    null
+                }
                 <div className={styles.links}>
-                    <a>{props.content.linkOne}</a>
-                    <a>{props.content.linkTwo ? props.content.linkTwo : ''}</a>
+                    <div>{props.content.linkOne}</div>
+                    {props.content.linkTwo ? <div>{props.content.linkTwo}</div> : null}
                 </div>
             </div>
-            {/* <div className={styles.image}><img src={props.content.image} /></div> */}
         </div>
     )
 }

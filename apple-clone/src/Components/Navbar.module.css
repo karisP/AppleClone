@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,8 +7,27 @@
     width: 100%;
 }
 
-.container div{
-    width: 30px;
-    height: 30px;
-    border: 1px solid white;
+.hamburger {
+    width: 48px;
+    height: 48px;
+}
+
+.apple-icon {
+    background-image: url(../images/apple_sm.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 18px;
+    height: 48px;
+    padding: 0px 10px;
+}
+
+.cart-icon {
+    background-image: url(../images/shopping_bag.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 17px;
+    height: 48px;
+    padding: 0px 16px;
 }
