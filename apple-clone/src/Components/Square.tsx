@@ -37,8 +37,8 @@ const Square = (props: IProps) => {
                     null
                 }
                 <div className={styles.links}>
-                    <div>{props.content.linkOne}</div>
-                    {props.content.linkTwo ? <div>{props.content.linkTwo}</div> : null}
+                    <div>{props.content.linkOne}<div className={styles.chevron}></div></div>
+                    {props.content.linkTwo ? <div>{props.content.linkTwo}<div className={styles.chevron}></div></div> : null}
                 </div>
             </div>
         </div>

@@ -21,12 +21,21 @@
     color: #06c;
 }
 
-.links div::after {
-    content: ">";
-    padding-left: .3em;
+.links div {
+    display: flex;
 }
 
-.links div:last-child {
+.chevron {
+    background-image: url(../images/icons8-chevron-right-30.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 12px;
+    height: 24px;
+    background-size: contain;
+    margin-left: 0.3em;
+}
+
+.links > div:last-child {
     margin-left: 27px;
 }
 
