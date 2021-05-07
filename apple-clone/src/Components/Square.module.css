@@ -6,6 +6,48 @@
     margin-bottom: 12px;
 }
 
+.bkgr-0 {
+    background-image: url('https://www.apple.com/v/home/y/images/heroes/imac/hero_imac_avail__zbofyl96mzmm_small_2x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.bkgr-1 {
+    background-image: url('https://www.apple.com/v/home/y/images/heroes/iphone-12-purple/hero_iphone_12_purple__eybnx2ju5mky_small_2x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.bkgr-2 {
+    background-image: url('https://www.apple.com/v/home/y/images/heroes/ipad-pro/hero_ipad_pro__gl982dtu49im_small_2x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.bkgr-3 {
+    background-image: url('https://www.apple.com/v/home/y/images/promos/airtag/promo_airtag__e6b73a64nno2_small_2x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.bkgr-4 {
+    background-image: url('https://www.apple.com/v/home/y/images/promos/watch-series-6/promo_watch_series_6_lte__f8lrasjnry2y_small_2x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.bkgr-5 {
+    background-image: url('https://www.apple.com/v/home/y/images/promos/mothers-day/tile_lastchance__eos89elmgi6a_small_2x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.bkgr-6 {
+    background-image: url('https://www.apple.com/v/home/y/images/promos/apple-card/tile__cauwwcyyn9hy_small_2x.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
 .text {
     padding-top: 37px;
 }
@@ -65,4 +107,18 @@
 
 .dark-theme {
     color: white;
+}
+
+@media screen and (min-width: 734px){
+    .bkgr-0 {
+        background-image: url('https://www.apple.com/v/home/y/images/heroes/imac/hero_imac_avail__zbofyl96mzmm_medium_2x.jpg');
+    }
+    
+    .bkgr-1 {
+        background-image: url('https://www.apple.com/v/home/y/images/heroes/iphone-12-purple/hero_iphone_12_purple__eybnx2ju5mky_medium_2x.jpg');
+    }
+    
+    .bkgr-2 {
+        background-image: url('https://www.apple.com/v/home/y/images/heroes/ipad-pro/hero_ipad_pro__gl982dtu49im_medium_2x.jpg');
+    }
 }

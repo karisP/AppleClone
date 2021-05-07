@@ -5,12 +5,9 @@ import { IContent } from '../App';
 interface IProps {
     content: IContent;
 }
+
 const Square = (props: IProps) => {
-    const backgroundStyle = {
-        background: `url(${props.content.image})`,
-        backgroundPosition: `center`,
-        backgroundSize: `cover`,
-    }
+
     const backgroundStyleLogo = {
         backgroundImage: `url(${props.content.logo})`,
         backgroundRepeat: 'no-repeat',
@@ -20,7 +17,7 @@ const Square = (props: IProps) => {
     }
 
     return(
-        <div className={props.content.colorScheme !== "DARK" ? styles.container : `${styles.container} ${styles['dark-theme']}`} style={backgroundStyle}>
+        <div className={props.content.colorScheme !== "DARK" ? `${styles.container} ${styles[`bkgr-${props.content.id}`]}` : `${styles.container} ${styles[`bkgr-${props.content.id}`]} ${styles['dark-theme']}`}>
             <div className={styles.text}>
                 {
                     props.content.logo ?
