@@ -110,6 +110,9 @@
 }
 
 @media screen and (min-width: 734px){
+    .container {
+        height: 650px;
+    }
     .bkgr-0 {
         background-image: url('https://www.apple.com/v/home/y/images/heroes/imac/hero_imac_avail__zbofyl96mzmm_medium_2x.jpg');
     }
@@ -120,5 +123,11 @@
     
     .bkgr-2 {
         background-image: url('https://www.apple.com/v/home/y/images/heroes/ipad-pro/hero_ipad_pro__gl982dtu49im_medium_2x.jpg');
+    }
+}
+
+@media screen and (min-width: 1069px){
+    .container {
+        height: 692px;
     }
 }

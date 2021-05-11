@@ -45,10 +45,16 @@ function App() {
       <div className="banner one">Evaluate COVID-19 symptoms and understand next steps</div>
       <div className="banner two"><div><span>Shop online</span> and get Specialist help, free no-contact delivery, and more.</div></div>
       {
-        content.map((c, index) => {
+        content.slice(0,3).map((c, index) => {
           return <Square key={index} content={c}/>
         })
       }
+      <div className="grid">
+        {content.slice(3, content.length).map((c, index) => {
+            return <Square key={index} content={c}/>
+          })
+        }
+      </div>
       {/* footer */}
     </div>
   );
