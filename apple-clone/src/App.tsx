@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
 import Square from './Components/Square';
 
@@ -55,7 +56,7 @@ function App() {
           })
         }
       </div>
-      {/* footer */}
+      <Footer />
     </div>
   );
 }

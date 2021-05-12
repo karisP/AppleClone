@@ -42,6 +42,18 @@
     background-size: cover;
 }
 
+.bkgr-5 h2 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 265px;
+}
+
+.bkgr-5 h3 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 440px;
+}
+
 .bkgr-6 {
     background-image: url('https://www.apple.com/v/home/y/images/promos/apple-card/tile__cauwwcyyn9hy_small_2x.jpg');
     background-position: center;
@@ -114,15 +126,15 @@
         height: 650px;
     }
     .bkgr-0 {
-        background-image: url('https://www.apple.com/v/home/y/images/heroes/imac/hero_imac_avail__zbofyl96mzmm_medium_2x.jpg');
+        background-image: url('https://www.apple.com/v/home/y/images/heroes/imac/hero_imac_avail__zbofyl96mzmm_mediumtall_2x.jpg');
     }
     
     .bkgr-1 {
-        background-image: url('https://www.apple.com/v/home/y/images/heroes/iphone-12-purple/hero_iphone_12_purple__eybnx2ju5mky_medium_2x.jpg');
+        background-image: url('https://www.apple.com/v/home/y/images/heroes/iphone-12-purple/hero_iphone_12_purple__eybnx2ju5mky_mediumtall_2x.jpg');
     }
     
     .bkgr-2 {
-        background-image: url('https://www.apple.com/v/home/y/images/heroes/ipad-pro/hero_ipad_pro__gl982dtu49im_medium_2x.jpg');
+        background-image: url('https://www.apple.com/v/home/y/images/heroes/ipad-pro/hero_ipad_pro__gl982dtu49im_mediumtall_2x.jpg');
     }
 }
 
@@ -130,4 +142,16 @@
     .container {
         height: 692px;
     }
+    .bkgr-0 {
+        background-image: url('https://www.apple.com/v/home/y/images/heroes/imac/hero_imac_avail__zbofyl96mzmm_largetall_2x.jpg');
+    }
+    
+    .bkgr-1 {
+        background-image: url('https://www.apple.com/v/home/y/images/heroes/iphone-12-purple/hero_iphone_12_purple__eybnx2ju5mky_largetall_2x.jpg');
+    }
+    
+    .bkgr-2 {
+        background-image: url('https://www.apple.com/v/home/y/images/heroes/ipad-pro/hero_ipad_pro__gl982dtu49im_largetall_2x.jpg');
+    }
+    
 }
