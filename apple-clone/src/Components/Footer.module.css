@@ -5,13 +5,25 @@
     color: #86868b;
 }
 
+.container section:first-of-type {
+    border-bottom: 1px solid #d2d2d7;
+    color: #86868b;
+    padding: 17px 0 11px;
+    margin-top: 0.8em;
+}
+
 .container ul {
     list-style: none;
     padding-inline-start: unset;
     text-align: left;
+    margin: 0px;
 }
 
 .container li {
     font-size: 12px;
     padding-bottom: 0.8em;
+}
+
+.container section:last-of-type{
+    padding-top: 20px;
 }
