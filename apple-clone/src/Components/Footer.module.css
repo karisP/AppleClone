@@ -94,3 +94,42 @@
     margin-top: 5px;
     white-space: nowrap;
 }
+
+@media screen and (min-width: 768px){
+    .container {
+        padding: 22px;
+    }
+    .container section:nth-child(2) div {
+        border-bottom: none;
+    }
+
+    .container .plus {
+        display: none;
+    }
+
+    .container .hide {
+        display: block;
+    }
+
+    .container section:nth-child(2) {
+        display: flex;
+    }
+
+    .container section:nth-child(2) button {
+        margin-right: 20px;
+        font-weight: 600;
+        color: rgb(29, 29, 31);
+    }
+
+    .container section:nth-child(2) ul {
+        margin-right: 20px;
+    }
+
+    .container section:nth-child(2) li {
+        padding: 6px 0px;
+    }
+
+    .container .column {
+        flex-basis: 25%;
+    }
+}

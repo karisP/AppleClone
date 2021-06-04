@@ -28,7 +28,7 @@ const Footer = () => {
                 </ul>
             </section>
             <section>
-                <div>
+                <div className={styles.column}>
                     <button onClick={() => setList1(!list1)}><span>Shop and Learn</span><span className={!list1 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
                     <ul className={!list1 ? styles.hide : ''}>
                         <li>Mac</li>
@@ -45,30 +45,32 @@ const Footer = () => {
                         <li>Gift Cards</li>
                     </ul>
                 </div>
-                <div>
-                    <button onClick={() => setList2(!list2)}><span>Services</span><span className={!list2 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
-                    <ul className={!list2 ? styles.hide : ''}>
-                        <li>Apple Music</li>
-                        <li>Apple TV+</li>
-                        <li>Apple Fitness+</li>
-                        <li>Apple News+</li>
-                        <li>Apple Arcade</li>
-                        <li>iCloud</li>
-                        <li>Apple One</li>
-                        <li>Apple Card</li>
-                        <li>Apple Books</li>
-                        <li>App Store</li>
-                    </ul>
+                <div className={styles.column}>
+                    <div>
+                        <button onClick={() => setList2(!list2)}><span>Services</span><span className={!list2 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
+                        <ul className={!list2 ? styles.hide : ''}>
+                            <li>Apple Music</li>
+                            <li>Apple TV+</li>
+                            <li>Apple Fitness+</li>
+                            <li>Apple News+</li>
+                            <li>Apple Arcade</li>
+                            <li>iCloud</li>
+                            <li>Apple One</li>
+                            <li>Apple Card</li>
+                            <li>Apple Books</li>
+                            <li>App Store</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button onClick={() => setList3(!list3)}><span>Account</span><span className={!list3 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
+                        <ul className={!list3 ? styles.hide : ''}>
+                            <li>Manage Your Apple ID</li>
+                            <li>Apple Store Account</li>
+                            <li>iCloud.com</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <button onClick={() => setList3(!list3)}><span>Account</span><span className={!list3 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
-                    <ul className={!list3 ? styles.hide : ''}>
-                        <li>Manage Your Apple ID</li>
-                        <li>Apple Store Account</li>
-                        <li>iCloud.com</li>
-                    </ul>
-                </div>
-                <div>
+                <div className={styles.column}>
                     <button onClick={() => setList4(!list4)}><span>Apple Store</span><span className={!list4 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
                     <ul className={!list4 ? styles.hide : ''}>
                         <li>Find a Store</li>
@@ -84,60 +86,64 @@ const Footer = () => {
                         <li>Shopping Help</li>
                     </ul>
                 </div>
-                <div>
-                    <button onClick={() => setList5(!list5)}><span>For Business</span><span className={!list5 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
-                    <ul className={!list5 ? styles.hide : ''}>
-                        <li>Apple and Business</li>
-                        <li>Shop for Business</li>
-                    </ul>
+                <div className={styles.column}>
+                    <div>
+                        <button onClick={() => setList5(!list5)}><span>For Business</span><span className={!list5 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
+                        <ul className={!list5 ? styles.hide : ''}>
+                            <li>Apple and Business</li>
+                            <li>Shop for Business</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button onClick={() => setList6(!list6)}><span>For Education</span><span className={!list6 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
+                        <ul className={!list6 ? styles.hide : ''}>
+                            <li>Apple and Education</li>
+                            <li>Shop for K-12</li>
+                            <li>Shop for College</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button onClick={() => setList7(!list7)}><span>For Healthcare</span><span className={!list7 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
+                        <ul className={!list7 ? styles.hide : ''}>
+                            <li>Apple in Healthcare</li>
+                            <li>Health on Apple Watch</li>
+                            <li>Health Records on iPhone</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button onClick={() => setList8(!list8)}><span>For Government</span><span className={!list8 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
+                        <ul className={!list8 ? styles.hide : ''}>
+                            <li>Shop for Government</li>
+                            <li>Shop for Veterans and Military</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <button onClick={() => setList6(!list6)}><span>For Education</span><span className={!list6 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
-                    <ul className={!list6 ? styles.hide : ''}>
-                        <li>Apple and Education</li>
-                        <li>Shop for K-12</li>
-                        <li>Shop for College</li>
-                    </ul>
+                <div className={styles.column}>
+                    <div>
+                        <button onClick={() => setList9(!list9)}><span>Apple Values</span><span className={!list9 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
+                        <ul className={!list9 ? styles.hide : ''}>
+                            <li>Accessibility</li>
+                            <li>Education</li>
+                            <li>Environment</li>
+                            <li>Inclusion and Diversity</li>
+                            <li>Privacy</li>
+                            <li>Racial Equity and Justice</li>
+                            <li>Supplier Responsibility</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <button onClick={() => setList10(!list10)}><span>About Apple</span><span className={!list10 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
+                        <ul className={!list10 ? styles.hide : ''}>
+                            <li>Newsroom</li>
+                            <li>Apple Leadership</li>
+                            <li>Career Opportunities</li>
+                            <li>Investors</li>
+                            <li>Ethics and Compliance</li>
+                            <li>Events</li>
+                            <li>Contact Apple</li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <button onClick={() => setList7(!list7)}><span>For Healthcare</span><span className={!list7 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
-                    <ul className={!list7 ? styles.hide : ''}>
-                        <li>Apple in Healthcare</li>
-                        <li>Health on Apple Watch</li>
-                        <li>Health Records on iPhone</li>
-                    </ul>
-                </div>
-                <div>
-                    <button onClick={() => setList8(!list8)}><span>For Government</span><span className={!list8 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
-                    <ul className={!list8 ? styles.hide : ''}>
-                        <li>Shop for Government</li>
-                        <li>Shop for Veterans and Military</li>
-                    </ul>
-                </div>
-                <div>
-                    <button onClick={() => setList9(!list9)}><span>Apple Values</span><span className={!list9 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
-                    <ul className={!list9 ? styles.hide : ''}>
-                        <li>Accessibility</li>
-                        <li>Education</li>
-                        <li>Environment</li>
-                        <li>Inclusion and Diversity</li>
-                        <li>Privacy</li>
-                        <li>Racial Equity and Justice</li>
-                        <li>Supplier Responsibility</li>
-                    </ul>
-                </div>
-                <div>
-                    <button onClick={() => setList10(!list10)}><span>About Apple</span><span className={!list10 ? styles.plus : `${styles.plus} ${styles.transform}`}>+</span></button>
-                    <ul className={!list10 ? styles.hide : ''}>
-                        <li>Newsroom</li>
-                        <li>Apple Leadership</li>
-                        <li>Career Opportunities</li>
-                        <li>Investors</li>
-                        <li>Ethics and Compliance</li>
-                        <li>Events</li>
-                        <li>Contact Apple</li>
-                    </ul>
-                </div> 
             </section>
             <section>
                 <div>More ways to shop: <a href="/retail/">Find an Apple Store</a> or <a href="https://locate.apple.com/">other retailer</a> near you. <span>Or call 1-800-MY-APPLE.</span></div>
