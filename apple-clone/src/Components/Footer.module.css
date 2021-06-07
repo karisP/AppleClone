@@ -8,6 +8,7 @@
     font-size: 12px;
 }
 
+
 .container section:first-of-type {
     border-bottom: 1px solid #d2d2d7;
     color: #86868b;
@@ -27,13 +28,23 @@
     padding-bottom: 0.8em;
 }
 
+.container li  a, .container section:nth-child(2) li {
+    text-decoration: none;
+    color: #515154;
+    cursor: pointer;
+}
+
+.container li  a:hover, .container section:nth-child(2) li:hover {
+    text-decoration: underline;
+}
+
 .container section:nth-child(2) {
     padding-top: 20px;
     width: 100%;
 }
 
 
-.container section:nth-child(2) div {
+.container section:nth-child(2) > div, .container section:nth-child(2) > div > div:not(:last-child){
     border-bottom: 1px solid #d2d2d7;
 }
 
@@ -76,6 +87,20 @@
     padding-bottom: 19px;
 }
 
+.container section:last-child a {
+    color: #06c;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container section:last-child a:hover {
+    text-decoration: underline;
+}
+
+.container section:last-child > div:nth-child(2), .legal-links {
+    color: #515154;
+}
+
 .container section:last-child > div {
     padding-bottom: 8px;
     margin-bottom: 7px;
@@ -93,16 +118,25 @@
     padding-right: 10px;
     margin-top: 5px;
     white-space: nowrap;
+    cursor: pointer;
+}
+
+.container .legal-links div:hover {
+    text-decoration: underline;
+}
+
+.container .legal-links div:last-child {
+    border-right: none;
 }
 
 @media screen and (min-width: 768px){
     .container {
         padding: 22px;
     }
-    .container section:nth-child(2) div {
+    .container section:nth-child(2) > div, .container section:nth-child(2) > div > div:not(:last-child) {
         border-bottom: none;
     }
-
+    
     .container .plus {
         display: none;
     }
@@ -110,26 +144,49 @@
     .container .hide {
         display: block;
     }
-
+    
     .container section:nth-child(2) {
         display: flex;
     }
-
+    
     .container section:nth-child(2) button {
         margin-right: 20px;
         font-weight: 600;
         color: rgb(29, 29, 31);
     }
-
+    
     .container section:nth-child(2) ul {
         margin-right: 20px;
     }
-
+    
     .container section:nth-child(2) li {
         padding: 6px 0px;
     }
-
+    
     .container .column {
         flex-basis: 25%;
     }
+
+    .container section:last-child {
+        width: 100%;
+    }
+    .container section:last-child > div:first-child {
+        border-bottom: 1px solid #d2d2d7;
+    }
+    
+    .container section:last-child > div:nth-child(2) {
+        float: right;
+        margin-top: 5px;
+    }
+
+    .container section:last-child > div:last-child > div:first-child {
+        margin-top: 5px;
+        margin-right: 30px;
+    }
+}
+
+@media screen and (min-width: 874px) {
+    .container section:last-child > div:last-child {
+        display: flex;
+    } 
 }

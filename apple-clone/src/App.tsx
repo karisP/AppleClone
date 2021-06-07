@@ -43,8 +43,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <div className="banner one">Evaluate COVID-19 symptoms and understand next steps</div>
-      <div className="banner two"><div><span>Shop online</span> and get Specialist help, free no-contact delivery, and more.</div></div>
+      <div className="banner"><div><span>Shop online</span> and get Specialist help, free no-contact delivery, and more.</div></div>
       {
         content.slice(0,3).map((c, index) => {
           return <Square key={index} content={c}/>
