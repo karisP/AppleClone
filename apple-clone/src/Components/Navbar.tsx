@@ -1,9 +1,15 @@
+import React from 'react';
 import styles from './Navbar.module.css';
 const Navbar = () => {
+    const [openNav, setOpenNav] = React.useState<boolean>(false);
+    const onClickMobileNav = () => {
+        setOpenNav(!openNav);
+    }
+
     return (
-        <div className={styles.container}>
+        <div className={!openNav ? styles.container : `${styles.container} ${styles.mobile}`}>
             <div>
-                <div className={styles.hamburger}>
+                <div className={!openNav ? styles.hamburger : `${styles.hamburger} ${styles.close}`} onClick={onClickMobileNav}>
                     <div></div>
                     <div></div>
                 </div>
@@ -18,8 +24,22 @@ const Navbar = () => {
                     <img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_support_image__b24reo1n4fbm_large.svg" alt="support" />
                     <div className={styles.search}></div>
                 </div>
-                <div className={styles['cart-icon']}></div>
+                <div className={!openNav ? styles['cart-icon'] : `${styles['cart-icon']} ${styles.invisible}`}></div>
             </div>
+            {
+                openNav ?
+                <div className={styles['mobile-menu']}>
+                    <div><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_mac_image__fv4ktb435mum_small.svg" alt="mac" /></div>
+                    <div><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_ipad_image__fefum478f4uq_small.svg" alt="ipad" /></div>
+                    <div><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_iphone_image__dhepc4hn14cy_small.svg" alt="iphone" /></div>
+                    <div><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_watch_image__dfo5u4bhooqe_small.svg" alt="watch" /></div>
+                    <div><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_tv_image__dtzdy60o3imq_small.svg" alt="tv" /></div>
+                    <div><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_music_image__bewxrazzig02_small.svg" alt="music" /></div>
+                    <div><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_support_image__b24reo1n4fbm_small.svg" alt="support" /></div>
+                </div> 
+                :
+                null
+            }
         </div>
     )
 }
