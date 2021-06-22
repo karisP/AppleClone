@@ -6,6 +6,8 @@
     padding: 0 16px;
     color: #86868b;
     font-size: 12px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 
@@ -148,6 +150,11 @@
 @media screen and (min-width: 768px){
     .container {
         padding: 22px;
+    }
+
+    .container section {
+        max-width: 980px;
+        margin: 0 auto;
     }
     .container section:nth-child(2) > div, .container section:nth-child(2) > div > div:not(:last-child) {
         border-bottom: none;
