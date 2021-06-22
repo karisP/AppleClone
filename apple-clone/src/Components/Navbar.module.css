@@ -11,6 +11,7 @@
     /* background-color: rgba(0,0,0,0.92); */
     background-color: #2F2F2F;
     height: 48px;
+    z-index: 2;
 }
 
 .mobile > div:first-child {
@@ -35,12 +36,14 @@
 }
 
 .close div:first-child {
-    transform: rotate(135deg);
-    margin: 0px;
+    transform: rotate(45deg);
+    transition: transform .3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) .1008s;
+    margin: -1px;
 }
 
 .close div:last-child {
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
+    transition: transform .3192s cubic-bezier(0.04, 0.04, 0.12, 0.96) .1008s;
     margin: 0px;
 }
 
@@ -68,6 +71,41 @@
     visibility: hidden;
 }
 
+.closed-menu {
+    position: absolute;
+    animation: closeNav .44s ease-out;
+    width: 100%;
+}
+
+@keyframes closeNav {
+    0%{
+        height: 100vh;
+        visibility: visible;
+        background-color: #000;
+    }
+    
+    100% {
+        height: 0px;
+        visibility: collapse;
+        background: transparent;
+    }
+}
+
+.closed-menu > div {
+    visibility: hidden;
+    transition: visibility .3s ease-in;
+}
+
+.closed-menu > ul {
+    list-style-type: none;
+    visibility: hidden;
+    transition: visibility .3s ease-in;
+}
+
+.closed-menu > ul > li {
+    text-align: left;
+}
+
 .mobile-menu {
     background-color: #000;
     display: flex;
@@ -77,6 +115,19 @@
     width: 100vw;
     height: 100vh;
     z-index: 1;
+    animation: openNav .5s ease-in;
+}
+
+@keyframes openNav {
+    0% {
+        height: 0px;
+        visibility: collapse;
+    }
+
+    100% {
+        height: 100vh;
+        visibility: visible;
+    }
 }
 
 .mobile-menu > div {
@@ -84,6 +135,8 @@
     width: 100%;
     padding-bottom: 17px;
     border-bottom: 1px solid #6e6e73;
+    transition: border-bottom .44s ease-in;
+    transition-delay: .3s;
 }
 
 .mobile-menu > div > div {
@@ -96,6 +149,8 @@
     font-size: 17px;
     border-radius: 7px;
     background-color: #1D1D1F;
+    transition: visibility .44s ease-in;
+    transition-delay: .3s;
 }
 
 .search {
@@ -107,7 +162,8 @@
 
 .mobile-menu ul {
     position: absolute;
-    top: 53px;
+    list-style-type: none;
+    /* top: 53px; */
     padding: 45px 40px 8px;
     box-sizing: border-box;
     width: 100%;
@@ -116,6 +172,8 @@
 .mobile-menu li {
     border-bottom: 1px solid #6e6e73;
     text-align: left;
+    transition: visibility 1s linear;
+    transition-delay: .5s;
 }
 
 .tablet {

@@ -26,25 +26,21 @@ const Navbar = () => {
                 </div>
                 <div className={!openNav ? styles['cart-icon'] : `${styles['cart-icon']} ${styles.invisible}`}></div>
             </div>
-            {
-                openNav ?
-                <div className={styles['mobile-menu']}>
-                    <div className={styles['search-bar']}>
-                        <div><div className={styles.search}></div><span>Search apple.com</span></div>
-                    </div>
-                    <ul>
-                        <li><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_mac_image__fv4ktb435mum_small.svg" alt="mac" /></li>
-                        <li><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_ipad_image__fefum478f4uq_small.svg" alt="ipad" /></li>
-                        <li><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_iphone_image__dhepc4hn14cy_small.svg" alt="iphone" /></li>
-                        <li><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_watch_image__dfo5u4bhooqe_small.svg" alt="watch" /></li>
-                        <li><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_tv_image__dtzdy60o3imq_small.svg" alt="tv" /></li>
-                        <li><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_music_image__bewxrazzig02_small.svg" alt="music" /></li>
-                        <li><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_support_image__b24reo1n4fbm_small.svg" alt="support" /></li>
-                    </ul>
-                </div> 
-                :
-                null
-            }
+            <div className={openNav ? styles['mobile-menu'] : styles['closed-menu']}>
+                <div className={styles['search-bar']}>
+                    <div><div className={styles.search}></div><span>Search apple.com</span></div>
+                </div>
+                <ul>
+                    <li><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_mac_image__fv4ktb435mum_small.svg" alt="mac" /></li>
+                    <li><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_ipad_image__fefum478f4uq_small.svg" alt="ipad" /></li>
+                    <li><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_iphone_image__dhepc4hn14cy_small.svg" alt="iphone" /></li>
+                    <li><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_watch_image__dfo5u4bhooqe_small.svg" alt="watch" /></li>
+                    <li><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_tv_image__dtzdy60o3imq_small.svg" alt="tv" /></li>
+                    <li><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_music_image__bewxrazzig02_small.svg" alt="music" /></li>
+                    <li><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_support_image__b24reo1n4fbm_small.svg" alt="support" /></li>
+                </ul>
+            </div>
+
         </div>
     )
 }
