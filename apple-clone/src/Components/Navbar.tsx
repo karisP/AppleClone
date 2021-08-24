@@ -2,9 +2,11 @@ import React from 'react';
 import styles from './Navbar.module.css';
 const Navbar = () => {
     const [openNav, setOpenNav] = React.useState<boolean>(false);
+    const [clickCounter, setClickCounter] = React.useState<number>(0);
     const onClickMobileNav = () => {
         setOpenNav(!openNav);
-    }
+        setClickCounter(clickCounter + 1);
+    };
 
     return (
         <div className={!openNav ? styles.container : `${styles.container} ${styles.mobile}`}>
@@ -26,7 +28,7 @@ const Navbar = () => {
                 </div>
                 <div className={!openNav ? styles['cart-icon'] : `${styles['cart-icon']} ${styles.invisible}`}></div>
             </div>
-            <div className={openNav ? styles['mobile-menu'] : styles['closed-menu']}>
+            <div className={clickCounter === 0 ? styles.hidden : !openNav ? styles['closed-menu'] : styles['mobile-menu']}>
                 <div className={styles['search-bar']}>
                     <div><div className={styles.search}></div><span>Search apple.com</span></div>
                 </div>
