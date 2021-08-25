@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import Footer from './Components/Footer';
 import Navbar from './Components/Navbar';
@@ -40,9 +41,15 @@ const content: IContent[] = [
 ];
 
 function App() {
+  const [overlay, setOverlay] = React.useState<boolean>(false);
+  const toggleOverlay = () => {
+    setOverlay(!overlay);
+  }
+
   return (
     <div className="App">
-      <Navbar/>
+      <div className={overlay ? "overlay" : undefined} onClick={overlay ? toggleOverlay : undefined}/>
+      <Navbar toggleOverlay={toggleOverlay} overlay={overlay} />
       <div className="banner"><div><span>Shop online</span> and get Specialist help, free no-contact delivery, and more.</div></div>
       {
         content.slice(0,3).map((c, index) => {

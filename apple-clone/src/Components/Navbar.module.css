@@ -33,6 +33,11 @@
     background: #fff;
     border-radius: 0.5px;
     margin: 3px;
+    opacity: .8;
+}
+
+.hamburger div:hover {
+    transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .close div:first-child {
@@ -55,6 +60,8 @@
     width: 18px;
     height: 48px;
     padding: 0px 10px;
+    opacity: .8;
+    transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .cart-icon {
@@ -65,6 +72,8 @@
     width: 17px;
     height: 48px;
     padding: 0px 16px;
+    opacity: .8;
+    transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .invisible {
@@ -134,7 +143,11 @@
     }
 }
 
-.mobile-menu > div {
+.lg-search-dropdown {
+    display: none;
+}
+
+.search-bar {
     position: absolute;
     width: 100%;
     padding-bottom: 17px;
@@ -143,7 +156,7 @@
     transition-delay: .3s;
 }
 
-.mobile-menu > div > div {
+.search-bar > div {
     display: flex;
     align-items: center;
     height: 36px;
@@ -161,7 +174,13 @@
     width: 13px;
     height: 13px;
     margin-right: 10px;
+    opacity: .8;
+    transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
     background-image: url('https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_search_image__fca9mfoh8a2q_small.svg');
+}
+
+.search:hover, .apple-icon:hover, .cart-icon:hover {
+    opacity: 1;
 }
 
 .mobile-menu ul {
@@ -178,6 +197,11 @@
     text-align: left;
     transition: visibility 1s linear;
     transition-delay: .5s;
+    opacity: .8;
+}
+
+.mobile-menu li:hover {
+    transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .tablet {
@@ -207,16 +231,81 @@
 
     .tablet img {
         padding: 0 10px;
+        opacity: .8;
+        transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+
+    .tablet img:hover {
+        opacity: 1;
     }
 
     .search {
-        background-size: 18px 80px;
+        background-size: 18px 88px;
         background-repeat: no-repeat;
         background-position: 10px 0;
-        width: 18px;
+        width: 36px;
         height: 48px;
         padding: 0 10px;
+        background-color: unset;
+        border: none;
+        margin-right: 18px;
         background-image: url(https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_search_image__fca9mfoh8a2q_large.svg);
+    }
+
+    .lg-search-dropdown {
+        display: inline;
+        position: absolute;
+        top: 0;
+        left: 16.66667%;
+        width: 66.66667%;
+        height: calc(100vh - 16px);
+        z-index: 3;
+        pointer-events: none;
+    }
+
+    .search-bar {
+        border-bottom: none;
+    }
+
+    .search-bar > div {
+        height: 48px;
+        border-radius: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropdown {
+        position: absolute;
+        top: 48px;
+        width: 100%;
+        background-color: #fff;
+        border-bottom-right-radius: 18px;
+        border-bottom-left-radius: 18px;
+    }
+
+    .dropdown .content {
+        margin: 0 40px;
+        padding: 24px 0 18px;
+        text-align: left;
+    }
+
+    .dropdown .content div {
+       font-size: 12px;
+       color: #6e6e73;
+       text-transform: uppercase;
+    }
+
+    .dropdown .content ul {
+        list-style-type: none;
+        margin: 0 0 0 8px;
+        padding-top: 5px;
+    }
+
+    .dropdown .content li {
+        font-size: 14px;
+        line-height: 28px;
+        color: #1d1d1f;
+        margin: 6px -32px;
     }
 
     .hamburger {
