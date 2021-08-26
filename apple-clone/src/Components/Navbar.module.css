@@ -275,6 +275,15 @@
         background-color: #000;
     }
 
+    .search-bar .search {
+        opacity: .5;
+    }
+
+    .search-bar .search:hover {
+        opacity: .5;
+        cursor: initial;
+    }
+
     .search-bar > div > span {
         flex: 1;
         text-align: left;
@@ -286,16 +295,20 @@
         height: 48px;
         cursor: pointer;
     }
-
+    
     .close-icon div {
         height: 18px;
         width: 1px;
-        background: #86868b;
+        background-color: #86868b;
         position: absolute;
         display: block;
         border-radius: 0.5px;
         left: 50%;
         top: 15px;
+    }
+    
+    .close-icon:hover div {
+        background-color: #bbbbbe;
     }
 
     .close-icon div:first-child {
@@ -341,8 +354,12 @@
         cursor: pointer;
     }
 
+    .dropdown a {
+        text-decoration: none;
+    }
+
     .dropdown .content li:hover {
-        color: blue;
+        color: #06c;
     }
 
     .hamburger {

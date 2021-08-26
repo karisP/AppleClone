@@ -21,16 +21,16 @@ const Navbar = (props: IProps) => {
                     <div></div>
                     <div></div>
                 </div>
-                <div className={styles['apple-icon']}></div>
+                <a href="https://www.apple.com/"><div className={styles['apple-icon']}></div></a>
                 <div className={styles.tablet}>
-                    <img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_store_image__d8z9vxma66c2_large.svg" alt="" />
-                    <img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_mac_image__fv4ktb435mum_large.svg" alt="mac" />
-                    <img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_ipad_image__fefum478f4uq_large.svg" alt="ipad" />
-                    <img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_iphone_image__dhepc4hn14cy_large.svg" alt="iphone" />
-                    <img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_watch_image__dfo5u4bhooqe_large.svg" alt="watch" />
-                    <img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_tv_image__dtzdy60o3imq_large.svg" alt="tv" />
-                    <img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_music_image__bewxrazzig02_large.svg" alt="music" />
-                    <img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_support_image__b24reo1n4fbm_large.svg" alt="support" />
+                    <a href="https://www.apple.com/us/shop/goto/store"><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_store_image__d8z9vxma66c2_large.svg" alt="" /></a>
+                    <a href="https://www.apple.com/mac/"><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_mac_image__fv4ktb435mum_large.svg" alt="mac" /></a>
+                    <a href="https://www.apple.com/ipad/"><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_ipad_image__fefum478f4uq_large.svg" alt="ipad" /></a>
+                    <a href="https://www.apple.com/iphone/"><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_iphone_image__dhepc4hn14cy_large.svg" alt="iphone" /></a>
+                    <a href="https://www.apple.com/watch/"><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_watch_image__dfo5u4bhooqe_large.svg" alt="watch" /></a>
+                    <a href="https://www.apple.com/tv/"><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_tv_image__dtzdy60o3imq_large.svg" alt="tv" /></a>
+                    <a href="https://www.apple.com/music/"><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_music_image__bewxrazzig02_large.svg" alt="music" /></a>
+                    <a href="https://support.apple.com/"><img src="https://www.apple.com/ac/globalnav/6/en_US/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_links_support_image__b24reo1n4fbm_large.svg" alt="support" /></a>
                     <button onClick={props.toggleOverlay} className={styles.search}></button>
                 </div>
                 <div className={!openNav ? styles['cart-icon'] : `${styles['cart-icon']} ${styles.invisible}`}></div>
@@ -50,11 +50,11 @@ const Navbar = (props: IProps) => {
                     <div className={styles.content}>
                         <div>Quick Links</div>
                         <ul>
-                            <li>Visiting an Apple Store FAQ</li>
-                            <li>Shop Apple Store Online</li>
-                            <li>Accessories</li>
-                            <li>AirPods</li>
-                            <li>AirTag</li>
+                            <a href="https://www.apple.com/us/shop/goto/temporary_closures"><li>Visiting an Apple Store FAQ</li></a>
+                            <a href="https://www.apple.com/us/shop/goto/shop"><li>Shop Apple Store Online</li></a>
+                            <a href="https://www.apple.com/us/shop/goto/accessories/apple_accessories"><li>Accessories</li></a>
+                            <a href="https://www.apple.com/airpods/"><li>AirPods</li></a>
+                            <a href="https://www.apple.com/airtag/"><li>AirTag</li></a>
                         </ul>
                     </div>
                 </div>
