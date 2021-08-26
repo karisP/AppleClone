@@ -15,7 +15,7 @@ const Navbar = (props: IProps) => {
     };
 
     return (
-        <div className={!openNav ? styles.container : `${styles.container} ${styles.mobile}`}>
+        <div className={props.overlay || openNav ? `${styles.container} ${styles['open-nav']}`: styles.container}>
             <div>
                 <div className={!openNav ? styles.hamburger : `${styles.hamburger} ${styles.close}`} onClick={onClickMobileNav}>
                     <div></div>
@@ -37,7 +37,14 @@ const Navbar = (props: IProps) => {
             </div>
             <div className={props.overlay ? styles['lg-search-dropdown'] : styles.hidden}>
                 <div className={styles['search-bar']}>
-                    <div><div className={styles.search}></div><span>Search apple.com</span></div>
+                    <div>
+                        <div className={styles.search}></div>
+                        <span>Search apple.com</span>
+                        <div className={styles['close-icon']} onClick={props.toggleOverlay}>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
                 </div>
                 <div className={styles.dropdown}>
                     <div className={styles.content}>
